@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {ReactComponent as Remove} from '../assets/images/icon-remove.svg';
+import { ReactComponent as Remove } from '../assets/images/icon-remove.svg';
 
 const Badge = ({
   variant = 'basic',
@@ -8,10 +8,11 @@ const Badge = ({
   onClear,
   onClick,
 }) => (
-  <div className={`badge badge--${variant} badge--${colorScheme}`} onClick={onClick}>
-    <span>
-      {children}
-    </span>
+  <div
+    className={`badge badge--${variant} badge--${colorScheme}`}
+    onClick={onClick}
+  >
+    <span>{children}</span>
     {variant === 'clearable' && (
       <div className='badge-remover' onClick={onClear}>
         <Remove />
@@ -20,7 +21,7 @@ const Badge = ({
   </div>
 );
 
-export {Badge};
+export { Badge };
 
 Badge.propTypes = {
   variant: PropTypes.oneOf(['basic', 'clearable', 'rounded']),
@@ -28,4 +29,4 @@ Badge.propTypes = {
   children: PropTypes.node.isRequired,
   onClear: PropTypes.func,
   onClick: PropTypes.func,
-}
+};

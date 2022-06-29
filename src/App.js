@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addPositions } from './store/positions/positions-actions';
+import { addPositions } from 'store/positions/positions-actions';
 import data from './mock/data.json';
 
 import { FilterPanel } from 'components/FilterPanel';
